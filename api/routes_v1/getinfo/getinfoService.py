@@ -35,7 +35,6 @@ class miniMania():
             sex = response_json["sex"]
             goldBalance = response_json["goldBalance"]
             tokensBalance = response_json["tokensBalance"]
-            cl = response_json["citizenPoints"]
           else:
             raise Exception(f"MiniMania api user/me: {self.sessionID}-{response.status_code}-{response.text}")
           
@@ -47,6 +46,7 @@ class miniMania():
             snapUrl = "https://cdn.minimania.app/avatars/" + response_json["snapUrl"]
             firstName = response_json["firstName"]
             lastName = response_json["lastName"]
+            cl = response_json["citizenLevel"]
             
           else:
             raise Exception(f"MiniMania api avatars: {response.status_code}-{response.text}")
